@@ -863,7 +863,7 @@
 										</a>
 										<a href="{{ data.get_absolute_url }}" class="name">{{ data.title}}</a>
 										<div class="text">
-											<p>{{ data.content }}</p>
+											<p>{{ data.content |slice:":200" }}</p>
 										</div>
 									</div>
 									
