@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Saad Nasim | Blog </title>
+	<meta name="author" content="name">
+	<meta name="description" content="description here">
+	<meta name="keywords" content="keywords,here">
+	
+  <link rel="stylesheet" href="{% static 'css/tailwind.css'%}"/>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+  <!--
+		Favicons
+	-->
+	<link rel="shortcut icon" href="{% static 'favicon.png'%}">
+	
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Quicksand');
+		::selection{background-color: aliceblue}
+		.font-serif{font-family : 'Quicksand', sans-serif;}
+		.smooth {
+				transition: box-shadow 0.3s ease-in-out;
+			}
+	</style>
+</head>
+<body class="bg-white font-sans leading-normal tracking-normal">
+
+	
+	
+	<!--Title-->
+	<div class="text-center pt-16 md:pt-32">
+		<p class="text-sm md:text-base text-teal-500 font-bold">- {{blog.created_on }} -<span class="text-gray-900"></span></p>
+		<h1 class="font-bold break-normal text-3xl md:text-5xl">{{blog.title}}</h1>
+	</div>
+
+	<!--image-->
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url({{blog.image.url}}); height: 75vh;"></div>
+	
+	<!--Container-->
+	<div class="container max-w-5xl mx-auto -mt-32">
+		
+		<div class="mx-0 sm:mx-6">
+			
+			<div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal shadow-md m-5">
+				
+				<!--Post Content-->
+				
+
+				<!--Lead Para-->
+<p class="font-serif">{{blog.content}} </p>									
+				<!--/ Post Content-->
+						
+			</div>
+						
+		</div>
+
+	</div>
+
+
+
+
+	</footer>
+
+
+</script>
+</body>
+</html>
