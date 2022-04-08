@@ -9,6 +9,10 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls import url
 from django.views.generic.base import TemplateView
 
+admin.site.site_header="Saad Nasim"
+admin.site.site_title = "Nasim's Administration"
+admin.site.index_title = "Nasim's Administration"
+
 urlpatterns = [
     path('user-admin/', admin.site.urls),
     path('', include('portfolio.urls')),
