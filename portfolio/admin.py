@@ -20,7 +20,11 @@ admin.site.register(Work,WorkAdmin)
 
 admin.site.register(Cv)
 
-admin.site.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('image', 'url')
+    search_fields = ['image', 'url']
+  
+admin.site.register(Client, ClientAdmin)
 
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = ('name', 'designation')
