@@ -1,4 +1,5 @@
 
+from pickle import TRUE
 import django_heroku
 from pathlib import Path
 from decouple import config
@@ -124,6 +125,8 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '828747611352952',
     'API_SECRET': 'F1vVj4zNIjt7LK7I8X7X1n3tBUk'
 }
+
+SECURE_SSL_REDIRECT = TRUE
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Default primary key field type
